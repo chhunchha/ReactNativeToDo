@@ -121,7 +121,8 @@ const styles = StyleSheet.create({
     inputText: {
         padding: 10,
         height: 40,
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        fontSize: 20
     },
     primaryButton: {
         width: '100%',
