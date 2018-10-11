@@ -7,17 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import {
-    FlatList,
-    ImageBackground,
-    Platform,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableHighlight,
-    View
-} from 'react-native';
-import { ToDo } from "./ToDo";
+import { ImageBackground, Platform, StyleSheet, Text, TextInput, TouchableHighlight, View } from 'react-native';
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -93,13 +83,13 @@ export default class App extends Component<Props> {
                             <Text style={styles.buttonText}>Add</Text>
                         </TouchableHighlight>
 
-                        <View style={styles.todoList}>
-                            <FlatList
-                                data={this.state.todos}
-                                renderItem={
-                                    ({ item }) => <ToDo todo={item} toggleCompleted={this.toggleCompleted} />
-                                } />
-                        </View>
+                        {/*<View style={styles.todoList}>*/}
+                        {/*<FlatList*/}
+                        {/*data={this.state.todos}*/}
+                        {/*renderItem={*/}
+                        {/*({ item }) => <ToDo todo={item} toggleCompleted={this.toggleCompleted} />*/}
+                        {/*} />*/}
+                        {/*</View>*/}
                     </View>
                 </ImageBackground>
             </View>
