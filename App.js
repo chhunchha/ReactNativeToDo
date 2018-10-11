@@ -66,6 +66,19 @@ export default class App extends Component<Props> {
         }
     };
 
+    toggleCompleted = (todo) => {
+        let todos = this.state.todos.slice(0);
+        todos.map((t) => {
+            if (t.key === todo.key) {
+                t.completed = !t.completed;
+            }
+        });
+        console.log(todos);
+        this.setState({
+            todos: todos
+        });
+    };
+
     render() {
         return (
             <View style={styles.container}>
@@ -84,7 +97,7 @@ export default class App extends Component<Props> {
                             <FlatList
                                 data={this.state.todos}
                                 renderItem={
-                                    ({ item }) => <ToDo todo={item} />
+                                    ({ item }) => <ToDo todo={item} toggleCompleted={this.toggleCompleted} />
                                 } />
                         </View>
                     </View>
